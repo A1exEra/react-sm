@@ -18,4 +18,5 @@ body {
 }
 body h1:first-child {
   color: var(--main-text-color);
+  text-align: center;
 }

@@ -1,10 +1,14 @@
 import "./App.css";
+import ExpenseItem from "./components/ExpenseItem";
+import expensesData from "./expenses";
 
 function App() {
   return (
-    <div className="App">
+    <div className="container">
       <h1>Jacked Up And Good To Go</h1>
-      <p>This is the main container</p>
+      {expensesData.map((expense) => (
+        <ExpenseItem key={expense.id} expense={expense} />
+      ))}
     </div>
   );
 }

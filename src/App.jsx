@@ -10,7 +10,6 @@ const App = () => {
     // expensesData.unshift(expense);
     setExpenses((prevVal) => [expense, ...prevVal]);
   };
-  console.log(expenses);
   return (
     <div className="container">
       <h1>Jacked Up And Good To Go</h1>

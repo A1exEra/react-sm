@@ -13,9 +13,6 @@ const ExpenseForm = (props) => {
     date
   )}`;
   //
-  //   const [title, setTitle] = useState("");
-  //   const [amount, setAmount] = useState("");
-  //   const [dateState, setDate] = useState("");
   const [data, setData] = useState({
     title: "enter your expense",
     amount: "0.1",
@@ -81,7 +78,10 @@ const ExpenseForm = (props) => {
           />
         </div>
       </div>
-      <div className="new-expense__acrions">
+      <div className="new-expense__actions">
+        <button type="button" onClick={props.isEditingHandler}>
+          CANCEL
+        </button>
         <button type="submit">ADD EXPENSE</button>
       </div>
     </form>

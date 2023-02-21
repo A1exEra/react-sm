@@ -1,0 +1,43 @@
+.user-form {
+  margin: 2rem auto;
+  padding: 1rem;
+  width: 500px;
+  /* height: 200px; */
+  display: flex;
+  flex-direction: column;
+  background-color: #7b8fa1;
+  border-radius: 10px;
+  border: 2px solid black;
+  box-shadow: 5px 5px 5px rgb(27, 26, 26);
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+}
+
+.user-form label {
+  margin-top: 10px;
+}
+.user-form input {
+  border-radius: 5px;
+  padding-left: 5px;
+}
+.user-form button {
+  width: 40%;
+  margin: 1rem 0;
+  border-radius: 5px;
+  background: #282c34;
+  color: #61dafb;
+  font-size: 1.3rem;
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+.user-form button:hover {
+  cursor: pointer;
+  background: #434956;
+}
+@media (min-width: 768px) {
+  .user-form button {
+    width: auto;
+  }
+}

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
 import Button from "../../UI/Button/Button";
-import "./CourseInput.css";
-import styled from "styled-components";
-
+import styles from "./CourseInput.module.css";
+// import styled from "styled-components";
+/*
 const FormControl = styled.div`
   margin: 0.5rem 0;
 
@@ -30,7 +30,7 @@ const FormControl = styled.div`
     border-color: #8b005d;
   }
 `;
-
+*/
 const CourseInput = (props) => {
   const [enteredValue, setEnteredValue] = useState("");
   const [isValid, setIsValid] = useState(true);
@@ -54,9 +54,9 @@ const CourseInput = (props) => {
   return (
     <form onSubmit={formSubmitHandler}>
       {/* <FormControl className={`${!isValid && "invalid"}`}> */}
-      <FormControl invalid={!isValid}>
-        {/* <div className={`form-control ${!isValid ? "invalid" : ""}`}> */}
-        {/* <label style={{ color: !isValid ? "red" : "black" }}>Course Goal</label>
+      {/* <FormControl invalid={!isValid}> */}
+      {/* <div className={`form-control ${!isValid ? "invalid" : ""}`}> */}
+      {/* <label style={{ color: !isValid ? "red" : "black" }}>Course Goal</label>
         <input
           style={{
             borderColor: isValid ? "inherit" : "red",
@@ -65,10 +65,16 @@ const CourseInput = (props) => {
           type="text"
           onChange={goalInputChangeHandler}
         /> */}
+      {/* <label>Course Goal</label> */}
+      {/* <input type="text" onChange={goalInputChangeHandler} /> */}
+      {/* </div> */}
+      {/* </FormControl> */}
+      <div
+        className={`${styles["form-control"]} ${!isValid && styles.invalid}`}
+      >
         <label>Course Goal</label>
         <input type="text" onChange={goalInputChangeHandler} />
-        {/* </div> */}
-      </FormControl>
+      </div>
       <Button type="submit">Add Goal</Button>
     </form>
   );

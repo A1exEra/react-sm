@@ -1,0 +1,42 @@
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: auto;
+  border-radius: 10px;
+  border: 2px solid black;
+  box-shadow: 5px 5px 5px rgb(27, 26, 26);
+  background: #7b8fa1;
+  width: 500px;
+  height: 200px;
+  font-size: 1.2rem;
+  padding: 10px;
+}
+.modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #7b8fa1;
+  opacity: 0.5;
+}
+.modal button {
+  width: 40%;
+  margin: 1rem 0;
+  border-radius: 5px;
+  background: #282c34;
+  color: #61dafb;
+  font-size: 1.3rem;
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+.modal button:hover {
+  cursor: pointer;
+  background: #434956;
+}
+@media (min-width: 768px) {
+  .modal button {
+    width: auto;
+  }
+}

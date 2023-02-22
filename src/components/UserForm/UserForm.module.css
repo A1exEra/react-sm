@@ -1,14 +1,13 @@
-.user-form {
-  margin: 2rem auto;
+.user-form form {
+  /* margin: 2rem auto; */
+  /* width: 500px; */
+  /* background-color: #7b8fa1; */
+  /* border-radius: 10px; */
+  /* border: 2px solid black; */
+  /* box-shadow: 5px 5px 5px rgb(27, 26, 26); */
   padding: 1rem;
-  width: 500px;
-  /* height: 200px; */
   display: flex;
   flex-direction: column;
-  background-color: #7b8fa1;
-  border-radius: 10px;
-  border: 2px solid black;
-  box-shadow: 5px 5px 5px rgb(27, 26, 26);
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
   letter-spacing: 1px;
@@ -22,7 +21,10 @@
   border-radius: 5px;
   padding-left: 5px;
 }
-.user-form button {
+.invalid {
+  border: 2px solid red;
+}
+/* .user-form button {
   width: 40%;
   margin: 1rem 0;
   border-radius: 5px;
@@ -40,4 +42,4 @@
   .user-form button {
     width: auto;
   }
-}
+} */

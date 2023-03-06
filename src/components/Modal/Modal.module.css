@@ -1,16 +1,18 @@
-.modal {
+/* .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  margin: auto;
+  transform: translate(-50%, -80%);
   border-radius: 10px;
   border: 2px solid black;
   box-shadow: 5px 5px 5px rgb(27, 26, 26);
-  background: #7b8fa1;
+  background: #282c34;
   width: 500px;
-  height: 200px;
+  min-height: 200px;
   font-size: 1.2rem;
   padding: 10px;
+  z-index: 10;
+  color: rgb(221, 17, 27);
 }
 .modal-background {
   position: fixed;
@@ -20,6 +22,7 @@
   height: 100vh;
   background: #7b8fa1;
   opacity: 0.5;
+  z-index: 9;
 }
 .modal button {
   width: 40%;
@@ -38,5 +41,51 @@
 @media (min-width: 768px) {
   .modal button {
     width: auto;
+  }
+} */
+/*  */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background: rgb(123, 143, 161, 0.5);
+}
+
+.modal {
+  position: fixed;
+  top: 30vh;
+  left: 10%;
+  width: 80%;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.header {
+  background: #4f005f;
+  padding: 1rem;
+}
+
+.header h2 {
+  margin: 0;
+  color: white;
+}
+
+.content {
+  padding: 1rem;
+}
+
+.actions {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (min-width: 768px) {
+  .modal {
+    left: calc(50% - 20rem);
+    width: 40rem;
   }
 }

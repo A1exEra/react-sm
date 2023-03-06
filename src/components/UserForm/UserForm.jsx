@@ -8,16 +8,23 @@ const UserForm = (props) => {
     name: "",
     age: "",
   });
+  const [errorMessage, seterrorMessage] = useState({ title: "", message: "" });
   const onSubmitHandler = (event) => {
     event.preventDefault();
     if (userInput.name.trim().length < 1 || userInput.age.trim().length < 1) {
       setIsValid(false);
       props.isModal(true);
+      seterrorMessage({
+        title: "Invalid Input!",
+        message: "Enter a valid user name and age.",
+      });
+      props.message(errorMessage);
       return;
     }
     const userId = () => Math.floor(Math.random() * 100) + 1;
     props.AddNewUser({ ...userInput, id: userId() });
     console.log(userInput);
+    setUserInput({ name: "", age: "" });
   };
   const UserNameChangeHandler = (event) => {
     if (event.target.value.trim().length < 1) {
@@ -45,6 +52,7 @@ const UserForm = (props) => {
           type="text"
           name="userName"
           onChange={UserNameChangeHandler}
+          value={userInput.name}
         />
         <label htmlFor="userage">User age:</label>
         <input
@@ -55,6 +63,7 @@ const UserForm = (props) => {
           max="50"
           name="userAge"
           onChange={UserAgeChangeHandler}
+          value={userInput.age}
         />
         <Button type="submit">Add User</Button>
       </form>

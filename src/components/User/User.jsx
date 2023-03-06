@@ -5,7 +5,7 @@ const Users = (props) => {
   return (
     <div className={styles.card}>
       <p>
-        {props.user.name}, {props.user.age}
+        {props.user.name}({props.user.age} years old)
       </p>
     </div>
   );
